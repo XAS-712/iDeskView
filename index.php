@@ -15,13 +15,15 @@ color: white;
 </style>
 <script src="js/date.js"></script> 
 <script src="js/musi.js"></script> 
-<script src="js/event.js"></script> 
+<script src="js/event.js"></script>
+<script src="js/sensor.js"></script> 
 <script type="text/javascript">
 window.onload=function(){
 showDate("date");
 showTime("time");
 eventNext();
 showMoto();
+checkSensor();
 setInterval("showDate(\"date\")","2000");
 setInterval("showTime(\"time\")","2000");
 setInterval("eventNext()","5000");
@@ -104,6 +106,7 @@ if (username!=null && username!="")
      <div id="pratA" style="float:left;width:49%">
 	 <div>
      <div id="pratB" style="float:left;width:49%">
+	 <div name="sensorview">
 	 <table border="1" style="font-family:arial;color:white">
      <tr>
      <th style="width:23%">Sensor</th>
@@ -130,6 +133,7 @@ if (username!=null && username!="")
      <td><span id="outPres">NoData</span></td>
      </tr>
      </table>
+	 </div>
 	 </div>
      <div id="pratB" style="float:right;width:49%">
 	 InfoB

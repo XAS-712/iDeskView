@@ -48,7 +48,18 @@ function datespan(instrds)
 		return "余-天"
 	}else{
 		var k2=(Date.parse(new Date())) / 1000
+		if(Math.ceil((instrds + 1 - k2) / 60 / 60 /24 + 0.7)>0)
+		{
 		return "余" + Math.ceil((instrds + 1 - k2) / 60 / 60 /24 + 0.7) + "天"
+		}
+		if(Math.ceil((instrds + 1 - k2) / 60 / 60 /24 + 0.7)==0)
+		{
+		return "今天就是"
+		}
+		if(Math.ceil((instrds + 1 - k2) / 60 / 60 /24 + 0.7)<0)
+		{
+		return "过" + Math.abs(Math.ceil((instrds + 1 - k2) / 60 / 60 /24 + 0.7)) + "天"
+		}
 	}
 }
 

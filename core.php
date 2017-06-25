@@ -1,7 +1,13 @@
 <?php
 $KEYKEY = "HUF:OR*M09moiURPO*Q#8qTOUHJf";
+$SENSOR = "true";
+
 switch($_GET['do'])
 {
+	case "issensor":
+	echo $SENSOR;
+	break;
+	
 	case "time":
 	echo date("H:i");
 	break;
